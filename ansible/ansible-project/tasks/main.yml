@@ -1,0 +1,34 @@
+---
+# tasks file for ansible-project
+- name: Update packages
+  apt:
+    update_cache: yes
+
+- name: Install Docker
+  apt:
+    name: docker.io
+    state: present
+
+- name: Start Docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Clone project
+  git:
+    repo: https://github.com/Prutha-Dongre/maven-java-app-for-docker
+    dest: /home/ubuntu/app
+    force: yes
+
+- name: Build Docker image
+  command: docker build -t java-app .
+  args:
+    chdir: /home/ubuntu/app
+
+- name: Remove old container
+  command: docker rm -f java-container
+  ignore_errors: yes
+
+- name: Run Docker container
+  command: docker run -d -p 8080:8080 --name java-container java-app

@@ -1,0 +1,5 @@
+region        = "us-west-1"
+instance_type = "t3.micro"
+ami_id        = "ami-0290e60ec230db1e4"
+instance_name = "Docker-Java-Server"
+key_name      = "terraform-key"

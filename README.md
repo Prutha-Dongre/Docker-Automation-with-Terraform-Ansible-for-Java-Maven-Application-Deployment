@@ -134,7 +134,7 @@ ssh_command = "ssh -i terraform-key.pem ubuntu@3.101.18.5"
 
 Ansible is used to configure the EC2 instance created by Terraform.
 
-The Ansible playbook runs **from the local machine** and connects to the EC2 instance via SSH.
+The Ansible playbook runs **from its own server** and connects to the EC2 instance via SSH.
 
 The playbook performs the following tasks automatically:
 
@@ -391,6 +391,8 @@ Docker → **runs Java container**
 Browser → **access application**
 ```
 
+Java-Maven app and docker file → [Java-Maven app and docker file](https://github.com/Prutha-Dongre/maven-java-app-for-docker)
+
 ---
 
 # Author
@@ -399,13 +401,10 @@ Browser → **access application**
 
 DevOps | Cloud | AWS | Docker | Terraform | Ansible
 
-GitHub  
-https://github.com/Prutha-Dongre
+GitHub  https://github.com/Prutha-Dongre
 
-Linkdin
-https://www.linkedin.com/in/prutha-dongre-31a61725a/
+Linkdin  https://www.linkedin.com/in/prutha-dongre-31a61725a/
 
-Portfolio
-https://www.buildwithprutha.cloud/
+Portfolio  https://www.buildwithprutha.cloud/
 
 ---
